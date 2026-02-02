@@ -1,0 +1,20 @@
+name: My First Action with Email
+
+on:
+  push:          # Triggers on any push to the repo
+    branches: [ main ]  # Change 'main' to your default branch if different
+  workflow_dispatch:  # Lets you trigger manually
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest  # Free Linux machine provided by GitHub
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4  # Grabs your repo files
+
+      - name: 22f1000392@ds.study.iitm.ac.in  # Your required step name
+        run: echo "Hello from GitHub Actions! This step has my email."
+
+      - name: List files
+        run: ls -la  # Optional: Shows repo contents in logs
